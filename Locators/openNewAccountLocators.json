@@ -1,0 +1,10 @@
+{
+    "openNewAccountHeader": "//h1[text()='Open New Account']",
+    "accountTypeDropdown": "//select[@id='type']",
+    "existingAccountDropdown": "//select[@id='fromAccountId']",
+    "openAccountButton": "//input[@value='Open New Account']",
+    "accountOpeningSuccessMessage": "//div[@id='rightPanel']/p",
+    "newAccountNumber": "//a[@id='newAccountId']",
+    "errorMessage": "//span[@class='error']"
+  }
+  

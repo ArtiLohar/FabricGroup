@@ -1,0 +1,13 @@
+{
+    "transferFundsHeader": "//h1[text()='Transfer Funds']",
+    "amountField": "//input[@id='amount']",
+    "fromAccountDropdown": "//select[@id='fromAccountId']",
+    "toAccountDropdown": "//select[@id='toAccountId']",
+    "transferButton": "//input[@value='Transfer']",
+    "transferMessage": "//div[@id='rightPanel']/p",
+    "transferConfirmationHeader": "//h1[text()='Transfer Complete!']",
+    "transferredAmount": "//span[@id='amount']",
+    "fromAccountNumber": "//span[@id='fromAccountId']",
+    "toAccountNumber": "//span[@id='toAccountId']"
+  }
+  

@@ -1,0 +1,10 @@
+{
+    "accountsOverviewHeader": "//h1[text()='Accounts Overview']",
+    "accountsTable": "//table[@id='accountTable']",
+    "accountRows": "//table[@id='accountTable']/tbody/tr",
+    "accountColumnHeaders": "//table[@id='accountTable']/thead/tr/th",
+    "accountLinks": "//table[@id='accountTable']//a",
+    "totalBalance": "//b[contains(text(),'Total:')]",
+    "goToTransactionHistory": "//a[contains(@href, 'activity.htm')]"
+  }
+  

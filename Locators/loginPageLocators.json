@@ -1,0 +1,16 @@
+{
+    "userName": "//input[@name='username']",
+    "password": "//input[@name='password']",
+    "loginButton": "//input[@value='Log In']",
+    "forgotLoginInfoLink": "//a[text()='Forgot login info?']",
+    "registerLink": "//a[text()='Register']",
+    "errorMessage": "//div[@id='rightPanel']/h1[text()='Error!']/following-sibling::p",
+    "loginPanelTitle": "//h2[text()='Customer Login']",
+    "footerText": "//div[@id='footer']",
+    "adminPageLink": "//a[text()='Admin Page']",
+    "homeTab": "//a[text()='Home']",
+    "aboutTab": "//a[text()='About Us']",
+    "contactTab": "//a[text()='Contact']",
+    "servicesTab": "//a[text()='Services']"
+  }
+  

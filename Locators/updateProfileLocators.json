@@ -1,0 +1,13 @@
+{
+    "updateProfileHeader": "//h1[text()='Update Profile']",
+    "firstNameField": "//input[@id='customer.firstName']",
+    "lastNameField": "//input[@id='customer.lastName']",
+    "addressField": "//input[@id='customer.address.street']",
+    "cityField": "//input[@id='customer.address.city']",
+    "stateField": "//input[@id='customer.address.state']",
+    "zipCodeField": "//input[@id='customer.address.zipCode']",
+    "phoneNumberField": "//input[@id='customer.phoneNumber']",
+    "updateProfileButton": "//input[@value='Update Profile']",
+    "successMessage": "//div[@id='rightPanel']//p[contains(text(),'Your updated address and phone number have been added to the system.')]"
+  }
+  

@@ -1,0 +1,19 @@
+{
+    "homeTab": "//a[text()='Home']",
+    "aboutTab": "//a[text()='About Us']",
+    "contactTab": "//a[text()='Contact']",
+    "servicesTab": "//a[text()='Services']",
+    "adminPageLink": "//a[text()='Admin Page']",
+    "logoutButton": "//a[text()='Log Out']",
+    "welcomeMessage": "//div[@id='rightPanel']/div/div/h1",
+    "accountOverviewHeader": "//h1[text()='Accounts Overview']",
+    "accountTable": "//table[@id='accountTable']",
+    "newAccountButton": "//a[text()='Open New Account']",
+    "transferFundsLink": "//a[text()='Transfer Funds']",
+    "billPayLink": "//a[text()='Bill Pay']",
+    "findTransactionsLink": "//a[text()='Find Transactions']",
+    "updateProfileLink": "//a[text()='Update Contact Info']",
+    "requestLoanLink": "//a[text()='Request Loan']",
+    "footerText": "//div[@id='footer']"
+  }
+  

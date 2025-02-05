@@ -1,0 +1,14 @@
+{
+    "findTransactionsHeader": "//h1[text()='Find Transactions']",
+    "accountDropdown": "//select[@id='accountId']",
+    "transactionIdField": "//input[@id='criteria.transactionId']",
+    "findByTransactionIdButton": "//button[text()='Find Transactions']",
+    "fromDateField": "//input[@id='criteria.fromDate']",
+    "toDateField": "//input[@id='criteria.toDate']",
+    "findByDateButton": "//button[@ng-click='criteria.searchType = searchTypes.date']",
+    "amountField": "//input[@id='criteria.amount']",
+    "findByAmountButton": "//button[@ng-click='criteria.searchType = searchTypes.amount']",
+    "transactionResultsTable": "//table[@id='transactionTable']",
+    "noTransactionsMessage": "//p[contains(text(),'No transactions found.')]"
+  }
+  

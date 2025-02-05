@@ -1,0 +1,17 @@
+{
+    "firstName": "//input[@id='customer.firstName']",
+    "lastName": "//input[@id='customer.lastName']",
+    "address": "//input[@id='customer.address.street']",
+    "city": "//input[@id='customer.address.city']",
+    "state": "//input[@id='customer.address.state']",
+    "zipCode": "//input[@id='customer.address.zipCode']",
+    "phoneNumber": "//input[@id='customer.phoneNumber']",
+    "ssn": "//input[@id='customer.ssn']",
+    "username": "//input[@id='customer.username']",
+    "password": "//input[@id='customer.password']",
+    "confirmPassword": "//input[@id='repeatedPassword']",
+    "registerButton": "//input[@value='Register']",
+    "registrationSuccessMessage": "//div[@id='rightPanel']/p",
+    "registrationErrorMessage": "//span[@class='error']"
+  }
+  

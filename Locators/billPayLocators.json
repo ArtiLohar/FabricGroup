@@ -1,0 +1,23 @@
+{
+   "billPayLinkFromLeftPanel" : "//a[@href='billpay.htm']",
+    "billPayHeader": "//h1[text()='Bill Payment Service']",
+    "payeeNameField": "//input[@name='payee.name']",
+    "payeeAddressField": "//input[@name='payee.address.street']",
+    "payeeCityField": "//input[@name='payee.address.city']",
+    "payeeStateField": "//input[@name='payee.address.state']",
+    "payeeZipCodeField": "//input[@name='payee.address.zipCode']",
+    "payeePhoneField": "//input[@name='payee.phoneNumber']",
+    "payeeAccountNumberField": "//input[@name='payee.accountNumber']",
+    "payeeVerifyAccountField": "//input[@name='verifyAccount']",
+    "amountField": "//input[@name='amount']",
+    "fromAccountDropdown": "//select[@name='fromAccountId']",
+    "sendPaymentButton": "//input[@value='Send Payment']",
+    "paymentConfirmationHeader": "//h1[text()='Bill Payment Complete']",
+    "paymentConfirmationMessage": "//div[@id='rightPanel']/p",
+    "billPaymentCompleteMessage": "//div[@id='billpayResult']/h1",
+    "fromAccountNumber": "//select[@name='fromAccountId']/option",
+    "bilPaymentAccountOnSuccessMsg":"//div[@id='billpayResult']//span[@id='fromAccountId']"
+  
+
+  }
+  

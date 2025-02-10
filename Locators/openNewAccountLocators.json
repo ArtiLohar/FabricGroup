@@ -1,4 +1,5 @@
 {
+    "openNewAccountLeftMenuOption":"//li/a[text()='Open New Account']",
     "openNewAccountHeader": "//h1[text()='Open New Account']",
     "accountTypeDropdown": "//select[@id='type']",
     "existingAccountDropdown": "//select[@id='fromAccountId']",

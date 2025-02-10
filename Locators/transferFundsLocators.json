@@ -4,7 +4,7 @@
     "fromAccountDropdown": "//select[@id='fromAccountId']",
     "toAccountDropdown": "//select[@id='toAccountId']",
     "transferButton": "//input[@value='Transfer']",
-    "transferMessage": "//div[@id='rightPanel']/p",
+    "transferMessage": "//div[@id='showForm']//h1[@class='title']",
     "transferConfirmationHeader": "//h1[text()='Transfer Complete!']",
     "transferredAmount": "//span[@id='amount']",
     "fromAccountNumber": "//span[@id='fromAccountId']",

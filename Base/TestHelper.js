@@ -1,18 +1,15 @@
 const { LoginPage } = require('../pageObjects/LoginPage');
 const { RegistrationPage } = require('../pageObjects/RegistrationPage');
-
 class TestHelper {
     constructor(page) {
         this.page = page;
         this.loginPage = new LoginPage(page);
         this.registrationPage = new RegistrationPage(page);
         this.logoutButton = page.locator("//a[text()='Log Out']");
-        this.registeredUser = null; // Store registered user details
+        this.registeredUser = null;
     }
-
     generateRandomCustomerDetails() {
-        const randomNum = Math.floor(Math.random() * 100000); // Generate unique number
-
+        const randomNum = Math.floor(Math.random() * 100000);
         return {
             firstName: "Test" + randomNum,
             lastName: "User" + randomNum,
@@ -22,26 +19,18 @@ class TestHelper {
             zipCode: "10001",
             phoneNumber: "1234567890",
             ssn: "123-45-6789",
-            username: "User" + randomNum, // Unique username
-            password: "Test$100", // Fixed password
+            username: "User" + randomNum,
+            password: "Test$100",
             confirmPassword: "Test$100"
         };
     }
-
     async registerUser() {
-        console.log("Registering a new user...");
-        this.registeredUser = this.generateRandomCustomerDetails(); // Store user details
+        this.registeredUser = this.generateRandomCustomerDetails();
         await this.page.goto("https://parabank.parasoft.com/parabank/register.htm");
         await this.registrationPage.fillRegistrationForm(this.registeredUser);
-        console.log("Registration successful with Username:", this.registeredUser.username);
-      
     }
-
     async logoutUser() {
-        console.log("Trying to Log Out...");
-        await this.logoutButton.click();
-        console.log("Logout successful");
+        await this.page.locator("//a[text()='Log Out']").click();
     }
 }
-
 module.exports = { TestHelper };

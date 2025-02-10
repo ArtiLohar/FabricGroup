@@ -3,15 +3,48 @@ import accountsOverviewLocators from "../locators/accountOverviewLocators.json";
 class AccountsOverviewPage {
 
     constructor(page) {
-        this.page = page;
-        this.accountsOverviewHeader = page.locator(accountsOverviewLocators.accountsOverviewHeader);
-        this.accountsTable = page.locator(accountsOverviewLocators.accountsTable);
-        this.accountRows = page.locator(accountsOverviewLocators.accountRows);
-        this.accountColumnHeaders = page.locator(accountsOverviewLocators.accountColumnHeaders);
-        this.accountLinks = page.locator(accountsOverviewLocators.accountLinks);
-        this.totalBalance = page.locator(accountsOverviewLocators.totalBalance);
-        this.goToTransactionHistory = page.locator(accountsOverviewLocators.goToTransactionHistory);
+        if (!page) {
+            throw new Error("Page instance is required! Make sure to pass it from TestSetup.");
+        }
+        this.page = page;      
     }
+
+    async clickOnAccountNumber()
+    {
+        await this.page.click(accountsOverviewLocators.accountNumberLink)
+    }
+
+    async fetchTransactionMessage() {
+        
+
+            const isVisible= await this.page.locator(accountsOverviewLocators.transactionMsg).isVisible();
+            if (isVisible) {
+                await this.page.locator(accountsOverviewLocators.transactionMsg).textContent();
+                return true;
+            } 
+            else {
+                return false;
+            }
+            
+    }
+
+    async fetchBalanceAmount()
+    {
+        console.log("*****************************************************");
+        const totalAmount = await this.page.textContent(accountsOverviewLocators.totalAmountText);
+        const balance =await this.page.textContent(accountsOverviewLocators.totalBalance);
+    
+        console.log("The total amount is:"+totalAmount);
+        console.log("The balance amount is:"+balance);
+        
+        if (totalAmount === balance) {
+            return totalAmount; 
+        } else {
+            throw new Error('Total amount and balance do not match.');
+        } 
+    }
+
+    
 
     async openAccountsOverviewPage() {
         await this.page.goto("https://parabank.parasoft.com/parabank/overview.htm");
@@ -32,7 +65,11 @@ class AccountsOverviewPage {
     }
 
     async getTotalBalance() {
-        return await this.totalBalance.textContent();
+        return await this.page.textContent(accountsOverviewLocators.totalBalance);
+    }
+    async getBalanceFromTable() {
+        console.log(await this.page.textContent(accountsOverviewLocators.getTableBalanceText));
+        return await this.page.textContent(accountsOverviewLocators.getTableBalanceText);
     }
 
     async navigateToTransactionHistory() {

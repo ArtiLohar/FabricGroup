@@ -3,83 +3,77 @@ import homePageLocators from "../locators/homePageLocators.json";
 class HomePage {
 
     constructor(page) {
-        this.page = page;
-        this.homeTab = page.locator(homePageLocators.homeTab);
-        this.aboutTab = page.locator(homePageLocators.aboutTab);
-        this.contactTab = page.locator(homePageLocators.contactTab);
-        this.servicesTab = page.locator(homePageLocators.servicesTab);
-        this.adminPageLink = page.locator(homePageLocators.adminPageLink);
-        this.logoutButton = page.locator(homePageLocators.logoutButton);
-        this.welcomeMessage = page.locator(homePageLocators.welcomeMessage);
-        this.accountOverviewHeader = page.locator(homePageLocators.accountOverviewHeader);
-        this.accountTable = page.locator(homePageLocators.accountTable);
-        this.newAccountButton = page.locator(homePageLocators.newAccountButton);
-        this.transferFundsLink = page.locator(homePageLocators.transferFundsLink);
-        this.billPayLink = page.locator(homePageLocators.billPayLink);
-        this.findTransactionsLink = page.locator(homePageLocators.findTransactionsLink);
-        this.updateProfileLink = page.locator(homePageLocators.updateProfileLink);
-        this.requestLoanLink = page.locator(homePageLocators.requestLoanLink);
-        this.footerText = page.locator(homePageLocators.footerText);
-    }
-
-    async openHomePage() {
-        await this.page.goto("https://example.com/home"); // Update URL as needed
+        if (!page) {
+            throw new Error("Page instance is required! Make sure to pass it from TestSetup.");
+        }
+        this.page = page;      
     }
 
     async navigateToAboutPage() {
-        await this.aboutTab.click();
+        await this.page.locator(homePageLocators.aboutTab).click();
     }
 
     async navigateToContactPage() {
-        await this.contactTab.click();
+        await this.page.locator(homePageLocators.contactTab).click();
     }
 
     async navigateToServicesPage() {
-        await this.servicesTab.click();
+        await this.page.locator(homePageLocators.servicesTab).click()
     }
 
-    async navigateToAdminPage() {
-        await this.adminPageLink.click();
+    async navigateToProductsPage() {
+       await this.page.locator(homePageLocators.productsTab).click();
     }
-
+    async navigateToLocationsPage() {
+        await this.page.locator(homePageLocators.locationsTab).click();
+     }
+     
     async logout() {
-        await this.logoutButton.click();
+        this.page.locator(homePageLocators.logoutButton).click()
     }
 
     async getWelcomeMessage() {
-        return await this.welcomeMessage.textContent();
+        return await this.page.locator(homePageLocators.welcomeMessage).textContent();
     }
 
     async navigateToAccountOverview() {
-        await this.accountOverviewHeader.click();
+        await this.page.locator(homePageLocators.accountOverviewLink).click();
     }
 
-    async openNewAccountPage() {
-        await this.newAccountButton.click();
+    async navigateToOpenNewAccountPage() {
+        await this.page.locator(homePageLocators.openNewAccountLink).click();
     }
 
     async navigateToTransferFundsPage() {
-        await this.transferFundsLink.click();
+        await this.page.locator(homePageLocators.transferFundsLink).click();
     }
 
     async navigateToBillPayPage() {
-        await this.billPayLink.click();
+        await this.page.locator(homePageLocators.billPayLink).click();
     }
 
     async navigateToFindTransactionsPage() {
-        await this.findTransactionsLink.click();
+        await this.page.locator(homePageLocators.findTransactionsLink).click();
     }
 
     async navigateToUpdateProfilePage() {
-        await this.updateProfileLink.click();
+        await this.page.locator(homePageLocators.updateProfileLink).click();
     }
 
     async navigateToRequestLoanPage() {
-        await this.requestLoanLink.click();
+        await this.page.locator(homePageLocators.requestLoanLink).click();
     }
 
     async getFooterText() {
-        return await this.footerText.textContent();
+        return await this.page.textContent(homePageLocators.footerText);
+    }
+
+    async navigateBack() {
+        await page.goBack({ waitUntil: 'domcontentloaded' });  
+    }
+
+    async navigateForward() {      
+        await page.goForward({ waitUntil: 'domcontentloaded' });
     }
 }
 

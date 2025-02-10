@@ -17,7 +17,5 @@
     "billPaymentCompleteMessage": "//div[@id='billpayResult']/h1",
     "fromAccountNumber": "//select[@name='fromAccountId']/option",
     "bilPaymentAccountOnSuccessMsg":"//div[@id='billpayResult']//span[@id='fromAccountId']"
-  
-
   }
   

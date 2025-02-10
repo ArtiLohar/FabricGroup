@@ -4,7 +4,13 @@
     "accountRows": "//table[@id='accountTable']/tbody/tr",
     "accountColumnHeaders": "//table[@id='accountTable']/thead/tr/th",
     "accountLinks": "//table[@id='accountTable']//a",
-    "totalBalance": "//b[contains(text(),'Total:')]",
-    "goToTransactionHistory": "//a[contains(@href, 'activity.htm')]"
+    "totalBalance": "//tr[2]/td[2]/b",
+    "goToTransactionHistory": "//a[contains(@href, 'activity.htm')]",
+    "accountNumberLink": "//a[contains(@href,'activity.htm')]",
+    "transactionMsg": "//p[@id='noTransactions']",
+    "totalAmountText":"//td[@id='availableBalance']",
+    "balanceText":"//td[@id='balance']",
+    "getTableBalanceText": "//table[@id='accountTable']//tbody/tr/td[2]"
+    
   }
   

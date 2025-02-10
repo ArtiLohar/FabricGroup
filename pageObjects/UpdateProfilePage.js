@@ -17,7 +17,7 @@ class UpdateProfilePage {
     }
 
     async openUpdateProfilePage() {
-        await this.page.goto("https://example.com/update-profile"); // Update URL as needed
+        await this.page.goto("https://example.com/update-profile"); 
     }
 
     async fillProfileUpdateForm(profileDetails) {

@@ -11,6 +11,7 @@
     "homeTab": "//a[text()='Home']",
     "aboutTab": "//a[text()='About Us']",
     "contactTab": "//a[text()='Contact']",
-    "servicesTab": "//a[text()='Services']"
+    "servicesTab": "//a[text()='Services']",
+    "unsuccessfulLoginErrorMsg": "//div[@id='rightPanel']/h1[text()='Error!']/following-sibling::p"
   }
   
